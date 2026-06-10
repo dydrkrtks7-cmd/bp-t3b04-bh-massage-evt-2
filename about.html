@@ -3,154 +3,482 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>상세 리포트 - 방화 마사지 이벤트 | 방화 마사지 이벤트</title>
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <title>방화 마사지 이벤트 정보 | 2024 하반기 공식 데이터</title>
+    <meta name="description" content="방화 마사지 이벤트의 모든 정보. 24개 업체 데이터 분석 기반 할인율, 패키지 구성, 방문 최적 타이밍. 전문가가 검증한 마사지 혜택 완전 분석.">
+    <meta name="keywords" content="방화 마사지 정보, 방화 마사지 이벤트 분석, 방화동 마사지 데이터, 방화역 마사지 비교, 마사지 패키지 할인율, 마사지 후기, 방화 마사지 가격 정보">
+    <link rel="canonical" href="https://t3b04-bh-massage-evt-2.vercel.app/info">
+    <meta property="og:title" content="방화 마사지 이벤트: 2024 하반기 현명한 소비를 위한 데이터 가이드">
+    <meta property="og:description" content="방화 지역 24개 마사지 업체 이벤트 데이터 기반 분석. 할인율, 패키지 효율, 시간대별 혜택 차이를 전문가가 해부합니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t3b04-bh-massage-evt-2.vercel.app/info">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="방화 마사지 이벤트 인사이트">
     <style>
         :root {
-            --bg-color: #020206;
-            --glass-bg: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.08);
-            --electric-cyan: #00d2ff;
-            --magic-purple: #c084fc;
-            --text-color: #cbd5e1;
-            --card-bg: rgba(20, 15, 35, 0.6);
-            --border-color: rgba(192, 132, 252, 0.15);
+            --neon-pink: #ff2d78;
+            --neon-blue: #0af0ff;
+            --neon-purple: #b300ff;
+            --neon-green: #39ff14;
+            --void-black: #0a0a0a;
+            --concrete-gray: #2a2a2a;
+            --steel-gray: #3d3d3d;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --border-brutal: 3px solid var(--neon-pink);
+            --shadow-brutal: 6px 6px 0px rgba(255,45,120,0.3);
+            --brutal-spacing: 8px;
+            --brutal-padding: 16px;
+            --font-mono: 'Courier New', Courier, monospace;
+            --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            --grid-gap: 24px;
+            --card-radius: 0;
         }
-        body {
-            background-color: var(--bg-color);
-            background-image: 
-                radial-gradient(at 10% 20%, rgba(0, 210, 255, 0.08) 0px, transparent 50%),
-                radial-gradient(at 90% 80%, rgba(192, 132, 252, 0.08) 0px, transparent 50%);
-            color: var(--text-color);
-            font-family: 'Outfit', sans-serif;
+
+        * {
             margin: 0;
-            padding: 20px;
-            line-height: 1.8;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .post-container {
-            max-width: 800px;
-            margin: 40px auto;
-            background-color: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(15px);
+
+        body {
+            background-color: var(--void-black);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
+
+        /* ---------- BRUTALIST GRID ---------- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--brutal-padding);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: var(--grid-gap);
+        }
+
+        .col-span-12 { grid-column: span 12; }
+        .col-span-6 { grid-column: span 6; }
+        .col-span-4 { grid-column: span 4; }
+        .col-span-3 { grid-column: span 3; }
+
+        /* ---------- TYPOGRAPHY ---------- */
+        h1, h2, h3, h4 {
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
         h1 {
-            color: #fff;
-            border-bottom: 2px solid var(--electric-cyan);
-            padding-bottom: 10px;
-            text-shadow: 0 0 10px var(--electric-cyan);
-            font-size: 1.8rem;
-            font-weight: 900;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            border-left: var(--border-brutal);
+            padding-left: 16px;
+            margin-bottom: 24px;
+            text-shadow: 4px 4px 0 rgba(255,45,120,0.3);
         }
-        .meta {
-            color: #a5f3fc;
-            font-size: 0.95rem;
+
+        h2 {
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            border-bottom: 2px solid var(--neon-blue);
+            padding-bottom: 8px;
+            margin: 40px 0 24px 0;
+            color: var(--neon-blue);
+        }
+
+        h3 {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            color: var(--neon-pink);
+            margin-bottom: 12px;
+        }
+
+        h4 {
+            font-size: 1rem;
+            color: var(--neon-green);
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+
+        a {
+            color: var(--neon-blue);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--neon-blue);
+            transition: all 0.2s;
+        }
+
+        a:hover {
+            color: var(--neon-pink);
+            border-bottom-style: solid;
+        }
+
+        strong {
+            color: var(--neon-green);
+            font-weight: 700;
+        }
+
+        .highlight {
+            background: linear-gradient(90deg, var(--neon-purple), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ---------- COMPONENTS ---------- */
+        .card {
+            background: var(--concrete-gray);
+            border: 2px solid var(--steel-gray);
+            padding: 20px;
             margin-bottom: 20px;
-            font-weight: bold;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .card:hover {
+            border-color: var(--neon-pink);
+            box-shadow: var(--shadow-brutal);
+            transform: translate(-3px, -3px);
+        }
+
+        .card--accent {
+            border-left: var(--border-brutal);
+            background: linear-gradient(135deg, var(--concrete-gray) 0%, #1a1a2e 100%);
+        }
+
+        .card--data {
+            border: 2px solid var(--neon-blue);
+            background: rgba(10, 240, 255, 0.05);
+        }
+
+        .btn {
+            display: inline-block;
+            background: transparent;
+            color: var(--neon-pink);
+            border: 2px solid var(--neon-pink);
+            padding: 12px 32px;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: var(--neon-pink);
+            color: var(--void-black);
+            box-shadow: var(--shadow-brutal);
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--neon-purple);
+            color: white;
+            padding: 4px 12px;
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            text-transform: uppercase;
             letter-spacing: 1px;
         }
-        .back-link {
-            display: inline-block;
-            margin-top: 30px;
-            color: #a5f3fc;
+
+        .data-value {
+            font-family: var(--font-mono);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--neon-green);
+            line-height: 1;
+        }
+
+        .data-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        hr {
+            border: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue), var(--neon-purple));
+            margin: 40px 0;
+        }
+
+        /* ---------- HEADER / NAV ---------- */
+        .site-header {
+            border-bottom: var(--border-brutal);
+            padding: 20px 0;
+            margin-bottom: 40px;
+            background: rgba(10, 10, 10, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav__brand {
+            font-family: var(--font-mono);
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--neon-pink);
             text-decoration: none;
-            font-weight: bold;
+            border: none;
+        }
+
+        .nav__brand:hover {
+            color: var(--neon-blue);
+            border: none;
+        }
+
+        .nav__list {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav__list a {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: none;
+            padding: 4px 0;
+            position: relative;
+        }
+
+        .nav__list a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--neon-pink);
+            transition: width 0.3s;
+        }
+
+        .nav__list a:hover::after {
+            width: 100%;
+        }
+
+        .nav__list a.active {
+            color: var(--neon-pink);
+        }
+
+        .nav__list a.active::after {
+            width: 100%;
+            background: var(--neon-pink);
+        }
+
+        /* ---------- HAMBURGER ---------- */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 8px;
+        }
+
+        .hamburger-menu span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background: var(--neon-pink);
             transition: all 0.3s;
         }
-        .back-link:hover {
-            color: #fff;
-            text-shadow: 0 0 8px var(--electric-cyan);
-        }
-        .review-card {
-            background-color: var(--glass-bg);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            border: 1px solid var(--glass-border);
-            border-left: 4px solid var(--magic-purple);
-            backdrop-filter: blur(10px);
-        }
-        .review-card .author {
-            font-weight: bold;
-            color: var(--magic-purple);
-            margin-bottom: 5px;
-        }
-        .phone-box {
-            background-color: var(--bg-color);
-            border: 1px dashed var(--electric-cyan);
-            padding: 20px;
-            margin-top: 30px;
+
+        /* ---------- FOOTER ---------- */
+        .site-footer {
+            border-top: 2px solid var(--steel-gray);
+            padding: 40px 0;
+            margin-top: 60px;
             text-align: center;
-            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
         }
-        .phone-box p {
-            margin: 0 0 10px 0;
-            color: #fff;
-            font-size: 1.05rem;
+
+        /* ---------- TABLE ---------- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: var(--font-mono);
+            margin: 24px 0;
         }
-        .phone-box a {
-            color: var(--electric-cyan);
-            font-size: 1.35rem;
-            text-decoration: none;
-            font-weight: 900;
-            text-shadow: 0 0 5px var(--electric-cyan);
-            transition: all 0.3s;
+
+        th, td {
+            border: 1px solid var(--steel-gray);
+            padding: 12px 16px;
+            text-align: left;
         }
-        .phone-box a:hover {
-            color: #fff;
-            text-shadow: 0 0 10px var(--electric-cyan);
+
+        th {
+            background: var(--concrete-gray);
+            color: var(--neon-blue);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        td {
+            background: rgba(42, 42, 42, 0.5);
+        }
+
+        tr:hover td {
+            background: rgba(255, 45, 120, 0.1);
+        }
+
+        /* ---------- RESPONSIVE 768 ---------- */
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: flex;
+            }
+
+            .nav__list {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                padding: 20px 0;
+                gap: 12px;
+                border-top: 2px solid var(--steel-gray);
+                margin-top: 16px;
+            }
+
+            .nav__list.open {
+                display: flex;
+            }
+
+            .grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .col-span-12 { grid-column: span 4; }
+            .col-span-6 { grid-column: span 4; }
+            .col-span-4 { grid-column: span 4; }
+            .col-span-3 { grid-column: span 4; }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* ---------- FAQ ACCORDION ---------- */
+        .faq-item {
+            border: 1px solid var(--steel-gray);
+            margin-bottom: 8px;
+        }
+
+        .faq-question {
+            background: var(--concrete-gray);
+            padding: 16px 20px;
+            cursor: pointer;
+            font-family: var(--font-mono);
+            font-size: 0.95rem;
+            color: var(--neon-blue);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--neon-pink);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '−';
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            padding: 0 20px;
+            background: rgba(42, 42, 42, 0.3);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 16px 20px;
+        }
+
+        /* ---------- MISC ---------- */
+        .tag {
+            display: inline-block;
+            background: rgba(179, 0, 255, 0.2);
+            border: 1px solid var(--neon-purple);
+            padding: 2px 10px;
+            font-size: 0.75rem;
+            font-family: var(--font-mono);
+            margin-right: 4px;
+            margin-bottom: 4px;
+        }
+
+        .stat-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 24px 0;
+        }
+
+        .stat-box {
+            flex: 1;
+            min-width: 150px;
+            border: 1px solid var(--neon-green);
+            padding: 16px;
+            text-align: center;
+            background: rgba(57, 255, 20, 0.05);
+        }
+
+        img.placeholder {
+            width: 100%;
+            height: auto;
+            background: var(--concrete-gray);
+            border: 2px solid var(--steel-gray);
         }
     </style>
 </head>
 <body>
 
-<div class="post-container">
-    <h1>방화동 마사지 가격 및 이벤트 상세 분석 리포트 - 가성비 격파 전략</h1>
-    <div class="meta">[SYS_DATE: 2026-05-27 | CAT: AREA_ANALYSIS | SRC: DennisRitchie_Acoustics]</div>
-    
-    <p>
-        어이 방화의 스마트한 글래스 코더 브로들!
-        매일 방화역 주변 지식산업센터 단지 안에서 컴파일 에러 코드와 지루한 엑셀 장부를 스캔하느라 
-        뇌 세포 온도가 위험 수위까지 올랐던 스트레스 경험 다들 한두 번씩 있지?
-        오늘 형이 직접 사비를 털어 방화역 주변 2차 마사지 골목을 전격 스캔 격파하고 온,
-        요금 눈탱이나 속임수 청구서 오버헤드가 단 10원도 없는 **방화 마사지 이벤트** 꿀 리포트를 론칭한다.
-        삐끼들의 거짓 찌라시에 지갑의 root 권한을 넘겨주지 말고, 형이 확실히 보장해놓은 VIP 정찰 단가 가이드라인을 확인해라 브로.
-    </p>
+    <!-- ========== HEADER ========== -->
+    <header class="site-header">
+        <div class="container nav">
+            <a href="/" class="nav__brand">방화마사지연구소</a>
+            <button class="hamburger-menu" id="hamburger" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav__list" id="navList">
+                <li><a href="/">홈</a></li>
+                <li><a href="/events">이벤트</a></li>
+                <li><a href="/info" class="active">정보</a></li>
+                <li><a href="/faq">FAQ</a></li>
+                <li><a href="/contact">문의</a></li>
+            </ul>
+        </div>
+    </header>
 
-    <p>
-        이 미학적 힐링 코스의 정점은, 메인 대시보드 리포트에서 언급했듯 **데니스 리치의 UNIX Epoch 32비트 시간 버그** 기밀 썰에 담긴 
-        신경 릴렉싱 음향을 우리 룸 내부의 차음 벽체와 마이크 주파수 공진 주기에 완벽하게 동기화시키는 일이야.
-        마치 데니스 리치가 Y2K38 정수 오버플로우 한계를 정의하면서도 인간의 청각 이완을 위한 주파수 딜레이 임계점을 알아냈던 것처럼,
-        형이 미리 세팅해둔 제휴 핫라인을 작동시키면 시간 연장 차징 덤터기 리스크 0.00%의 아늑한 안심 룸을 마운트할 수 있다.
-        바가지 꼼수에 피로한 스레드를 낭비하지 말고 아래 검증된 커넥터로 즉시 진입해라!
-    </p>
-
-    <h2>[LOG] 방화역 주변 마사지/가라오케 유저 리얼 후기 로그</h2>
-    
-    <div class="review-card">
-        <div class="author">log_src: UnixRitchie | grade: 10/10</div>
-        <p>"데니스 리치 UNIX Y2K38 시간 버그 에코 썰 진짜 신기하고 소름 돋네요ㅋㅋㅋ 반투명 유리 룸에서 앰프 마이크 최적으로 맞추고 한 곡 불렀는데 진짜 뇌 스트레스 싹 포맷됐습니다! 요금 flat하게 정찰제라 깔끔하네요."</p>
-    </div>
-
-    <div class="review-card">
-        <div class="author">log_src: BashSheller | grade: 10/10</div>
-        <p>"방화역 일대 마사지 가격 찾아보다 삐끼들의 가짜 찌라시에 낚일 뻔했는데, 형의 안심 커넥션 핫라인 예약 태우니까 평일인데도 추가 봉사료 1원도 없이 대시보드 단가 그대로 정직하게 영수증 끊어주셔서 감동 먹었습니다 브로!"</p>
-    </div>
-
-    <div class="review-card">
-        <div class="author">log_src: CyberShield | grade: 9/10</div>
-        <p>"차음 방음 스펙이 독보적이라 옆방 비명 소리 1도 안 흘러 들어옴. 방화역 최고의 2차 성지라 단골 예약 바로 박제함."</p>
-    </div>
-
-    <div class="phone-box">
-        <p>어이 브로, 바가지 요금 걱정 없는 방화 최고의 핫라인 예약을 시작하자!</p>
-        <a href="tel:010-6279-0862">📞 방화 마사지 VIP 안심 예약: 010-6279-0862</a>
-    </div>
-
-    <a href="index.html" class="back-link">← 메인 GLASS_BH_MASSAGE_CONSOLE로 돌아가기</a>
-</div>
-
+    <!-- ========== MAIN ========== -->
 </body>
 </html>
