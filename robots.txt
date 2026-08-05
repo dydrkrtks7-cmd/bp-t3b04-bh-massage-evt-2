@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://banghwa-info-room.mapo-room-guide.xyz/sitemap.xml
-Sitemap: https://banghwa-info-room.mapo-room-guide.xyz/sitemap-pages.xml
+Sitemap: https://daeheung-karaoke-note.notewell.site/sitemap.xml
+Sitemap: https://daeheung-karaoke-note.notewell.site/sitemap-pages.xml
