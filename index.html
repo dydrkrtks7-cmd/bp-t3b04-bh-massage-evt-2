@@ -1,220 +1,220 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>방화 마사지 이벤트 - Glassmorphism Aura & Dennis Ritchie UNIX Secrets</title>
-    <meta name="description" content="방화 마사지 이벤트의 투명 통계실! 반투명 서리 유리 글래스 아우라 비주얼과 데니스 리치 UNIX Epoch 32비트 시간 버그 썰이 전하는 마사지 케어 이완 릴렉스 가이드.">
-    <style>
-        :root {
-            --bg-color: #020206;
-            --glass-bg: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.08);
-            --electric-cyan: #00d2ff;
-            --magic-purple: #c084fc;
-            --text-color: #cbd5e1;
-            --title-color: #ffffff;
-            --card-bg: rgba(20, 15, 35, 0.6);
-            --border-color: rgba(192, 132, 252, 0.15);
-        }
-        body {
-            background-color: var(--bg-color);
-            background-image: 
-                radial-gradient(at 10% 20%, rgba(0, 210, 255, 0.08) 0px, transparent 50%),
-                radial-gradient(at 90% 80%, rgba(192, 132, 252, 0.08) 0px, transparent 50%);
-            color: var(--text-color);
-            font-family: 'Outfit', 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.8;
-        }
-        header {
-            border-bottom: 1px solid var(--glass-border);
-            padding: 60px 20px;
-            text-align: center;
-            background: rgba(2, 2, 6, 0.8);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            position: relative;
-        }
-        header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--electric-cyan), var(--magic-purple), transparent);
-        }
-        header h1 {
-            color: var(--title-color);
-            font-size: 2.6rem;
-            margin: 0;
-            text-shadow: 0 0 20px rgba(0, 210, 255, 0.4), 0 0 40px rgba(192, 132, 252, 0.3);
-            letter-spacing: 2px;
-            font-weight: 900;
-            text-transform: uppercase;
-        }
-        header p {
-            font-size: 1.1rem;
-            color: #a5f3fc;
-            margin: 15px 0 0 0;
-            letter-spacing: 4px;
-            font-weight: 600;
-        }
-        .container {
-            max-width: 950px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .intro-box {
-            background-color: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 40px;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(15px);
-        }
-        .intro-box h2 {
-            color: var(--title-color);
-            margin-top: 0;
-            font-size: 1.6rem;
-            text-shadow: 0 0 8px var(--electric-cyan);
-            border-bottom: 1px solid var(--glass-border);
-            padding-bottom: 15px;
-            font-weight: 800;
-        }
-        .intro-box p {
-            color: var(--text-color);
-        }
-        .spec-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 30px 0;
-            background-color: rgba(2, 2, 6, 0.5);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        .spec-table th, .spec-table td {
-            border: 1px solid var(--glass-border);
-            padding: 14px;
-            text-align: left;
-        }
-        .spec-table th {
-            background-color: rgba(192, 132, 252, 0.1);
-            color: #38bdf8;
-            font-weight: 800;
-        }
-        .spec-table td {
-            color: #fff;
-        }
-        .story-section {
-            background-color: var(--glass-bg);
-            border-left: 6px solid var(--electric-cyan);
-            padding: 30px;
-            margin-bottom: 40px;
-            border-radius: 0 12px 12px 0;
-            border: 1px solid var(--glass-border);
-            border-left: 6px solid var(--electric-cyan);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(15px);
-        }
-        .story-section h2 {
-            color: #fff;
-            margin-top: 0;
-            font-size: 1.5rem;
-            text-shadow: 0 0 10px var(--magic-purple);
-            font-weight: 800;
-        }
-        .story-section p {
-            color: var(--text-color);
-        }
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 30px;
-            justify-content: center;
-        }
-        .nav-links a {
-            color: var(--magic-purple);
-            text-decoration: none;
-            font-weight: bold;
-            border: 1px solid var(--magic-purple);
-            padding: 8px 20px;
-            border-radius: 4px;
-            transition: all 0.3s;
-            background-color: rgba(192, 132, 252, 0.05);
-        }
-        .nav-links a:hover {
-            color: #fff;
-            background-color: var(--magic-purple);
-            box-shadow: 0 0 15px var(--magic-purple);
-        }
-        .cta-section {
-            background: linear-gradient(135deg, rgba(2, 2, 6, 0.8) 0%, rgba(192, 132, 252, 0.3) 150%);
-            backdrop-filter: blur(20px);
-            border-radius: 12px;
-            padding: 45px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(192, 132, 252, 0.15);
-            border: 1px solid var(--glass-border);
-        }
-        .cta-section h2 {
-            margin-top: 0;
-            color: #fff;
-            font-size: 2.2rem;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
-            font-weight: 900;
-        }
-        .cta-section p {
-            color: #f1f5f9;
-            font-size: 1.15rem;
-        }
-        .btn-call {
-            display: inline-block;
-            background-color: var(--bg-color);
-            color: var(--electric-cyan);
-            border: 1px solid var(--electric-cyan);
-            padding: 18px 40px;
-            font-size: 1.4rem;
-            font-weight: 900;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-top: 25px;
-            transition: all 0.3s;
-            box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
-        }
-        .btn-call:hover {
-            background-color: var(--electric-cyan);
-            color: #fff;
-            box-shadow: 0 0 30px var(--electric-cyan);
-            transform: scale(1.05);
-        }
-        footer {
-            text-align: center;
-            padding: 50px 20px;
-            border-top: 1px solid var(--glass-border);
-            color: #64748b;
-            font-size: 0.9rem;
-            background-color: rgba(2, 2, 6, 0.9);
-        }
-    </style>
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "방화 마사지 이벤트",
-  "url": "https://banghwa-info-room.mapo-room-guide.xyz/",
-  "description": "반투명 서리 유리 글래스 아우라 무드의 방화역 마사지 찐 가이드 및 데니스 리치 UNIX Epoch 32비트 시간 버그 썰.",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://banghwa-info-room.mapo-room-guide.xyz/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>방화 마사지 이벤트 - Glassmorphism Aura & Dennis Ritchie UNIX Secrets</title>
+ <meta name="description" content="방화 마사지 이벤트의 투명 통계실! 반투명 서리 유리 글래스 아우라 비주얼과 데니스 리치 UNIX Epoch 32비트 시간 버그 썰이 전하는 마사지 케어 이완 릴렉스 가이드.">
+ <style>
+ :root {
+ --bg-color: #020206;
+ --glass-bg: rgba(255, 255, 255, 0.03);
+ --glass-border: rgba(255, 255, 255, 0.08);
+ --electric-cyan: #00d2ff;
+ --magic-purple: #c084fc;
+ --text-color: #cbd5e1;
+ --title-color: #ffffff;
+ --card-bg: rgba(20, 15, 35, 0.6);
+ --border-color: rgba(192, 132, 252, 0.15);
+ }
+ body {
+ background-color: var(--bg-color);
+ background-image: 
+ radial-gradient(at 10% 20%, rgba(0, 210, 255, 0.08) 0px, transparent 50%),
+ radial-gradient(at 90% 80%, rgba(192, 132, 252, 0.08) 0px, transparent 50%);
+ color: var(--text-color);
+ font-family: 'Outfit', 'Inter', sans-serif;
+ margin: 0;
+ padding: 0;
+ line-height: 1.8;
+ }
+ header {
+ border-bottom: 1px solid var(--glass-border);
+ padding: 60px 20px;
+ text-align: center;
+ background: rgba(2, 2, 6, 0.8);
+ backdrop-filter: blur(20px);
+ box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+ position: relative;
+ }
+ header::after {
+ content: '';
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ height: 1px;
+ background: linear-gradient(90deg, transparent, var(--electric-cyan), var(--magic-purple), transparent);
+ }
+ header h1 {
+ color: var(--title-color);
+ font-size: 2.6rem;
+ margin: 0;
+ text-shadow: 0 0 20px rgba(0, 210, 255, 0.4), 0 0 40px rgba(192, 132, 252, 0.3);
+ letter-spacing: 2px;
+ font-weight: 900;
+ text-transform: uppercase;
+ }
+ header p {
+ font-size: 1.1rem;
+ color: #a5f3fc;
+ margin: 15px 0 0 0;
+ letter-spacing: 4px;
+ font-weight: 600;
+ }
+ .container {
+ max-width: 950px;
+ margin: 40px auto;
+ padding: 0 20px;
+ }
+ .intro-box {
+ background-color: var(--glass-bg);
+ border: 1px solid var(--glass-border);
+ border-radius: 12px;
+ padding: 30px;
+ margin-bottom: 40px;
+ box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+ backdrop-filter: blur(15px);
+ }
+ .intro-box h2 {
+ color: var(--title-color);
+ margin-top: 0;
+ font-size: 1.6rem;
+ text-shadow: 0 0 8px var(--electric-cyan);
+ border-bottom: 1px solid var(--glass-border);
+ padding-bottom: 15px;
+ font-weight: 800;
+ }
+ .intro-box p {
+ color: var(--text-color);
+ }
+ .spec-table {
+ width: 100%;
+ border-collapse: collapse;
+ margin: 30px 0;
+ background-color: rgba(2, 2, 6, 0.5);
+ border-radius: 8px;
+ overflow: hidden;
+ }
+ .spec-table th, .spec-table td {
+ border: 1px solid var(--glass-border);
+ padding: 14px;
+ text-align: left;
+ }
+ .spec-table th {
+ background-color: rgba(192, 132, 252, 0.1);
+ color: #38bdf8;
+ font-weight: 800;
+ }
+ .spec-table td {
+ color: #fff;
+ }
+ .story-section {
+ background-color: var(--glass-bg);
+ border-left: 6px solid var(--electric-cyan);
+ padding: 30px;
+ margin-bottom: 40px;
+ border-radius: 0 12px 12px 0;
+ border: 1px solid var(--glass-border);
+ border-left: 6px solid var(--electric-cyan);
+ box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+ backdrop-filter: blur(15px);
+ }
+ .story-section h2 {
+ color: #fff;
+ margin-top: 0;
+ font-size: 1.5rem;
+ text-shadow: 0 0 10px var(--magic-purple);
+ font-weight: 800;
+ }
+ .story-section p {
+ color: var(--text-color);
+ }
+ .nav-links {
+ display: flex;
+ gap: 20px;
+ margin-bottom: 30px;
+ justify-content: center;
+ }
+ .nav-links a {
+ color: var(--magic-purple);
+ text-decoration: none;
+ font-weight: bold;
+ border: 1px solid var(--magic-purple);
+ padding: 8px 20px;
+ border-radius: 4px;
+ transition: all 0.3s;
+ background-color: rgba(192, 132, 252, 0.05);
+ }
+ .nav-links a:hover {
+ color: #fff;
+ background-color: var(--magic-purple);
+ box-shadow: 0 0 15px var(--magic-purple);
+ }
+ .cta-section {
+ background: linear-gradient(135deg, rgba(2, 2, 6, 0.8) 0%, rgba(192, 132, 252, 0.3) 150%);
+ backdrop-filter: blur(20px);
+ border-radius: 12px;
+ padding: 45px;
+ text-align: center;
+ box-shadow: 0 10px 30px rgba(192, 132, 252, 0.15);
+ border: 1px solid var(--glass-border);
+ }
+ .cta-section h2 {
+ margin-top: 0;
+ color: #fff;
+ font-size: 2.2rem;
+ text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+ font-weight: 900;
+ }
+ .cta-section p {
+ color: #f1f5f9;
+ font-size: 1.15rem;
+ }
+ .btn-call {
+ display: inline-block;
+ background-color: var(--bg-color);
+ color: var(--electric-cyan);
+ border: 1px solid var(--electric-cyan);
+ padding: 18px 40px;
+ font-size: 1.4rem;
+ font-weight: 900;
+ text-decoration: none;
+ border-radius: 8px;
+ margin-top: 25px;
+ transition: all 0.3s;
+ box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+ }
+ .btn-call:hover {
+ background-color: var(--electric-cyan);
+ color: #fff;
+ box-shadow: 0 0 30px var(--electric-cyan);
+ transform: scale(1.05);
+ }
+ footer {
+ text-align: center;
+ padding: 50px 20px;
+ border-top: 1px solid var(--glass-border);
+ color: #64748b;
+ font-size: 0.9rem;
+ background-color: rgba(2, 2, 6, 0.9);
+ }
+ </style>
+ <script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "방화 마사지 이벤트",
+ "url": "https://banghwa-info-room.mapo-room-guide.xyz/",
+ "description": "반투명 서리 유리 글래스 아우라 무드의 방화역 마사지 찐 가이드 및 데니스 리치 UNIX Epoch 32비트 시간 버그 썰.",
+ "potentialAction": {
+ "@type": "SearchAction",
+ "target": "https://banghwa-info-room.mapo-room-guide.xyz/search?q={search_term_string}",
+ "query-input": "required name=search_term_string"
+ }
 }</script>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="canonical" href="https://daeheung-karaoke-note.notewell.site/">
-  <meta property="og:url" content="https://daeheung-karaoke-note.notewell.site/">
+ <link rel="icon" type="image/svg+xml" href="favicon.svg">
+ <link rel="canonical" href="https://daeheung-karaoke-note.notewell.site/">
+ <meta property="og:url" content="https://daeheung-karaoke-note.notewell.site/">
   <meta property="og:title" content="방화 마사지 이벤트 - Glassmorphism Aura &amp; Dennis Ritchie UNIX Secrets">
   <meta property="og:description" content="방화 마사지 이벤트의 투명 통계실! 반투명 서리 유리 글래스 아우라 비주얼과 데니스 리치 UNIX Epoch 32비트 시간 버그 썰이 전하는 마사지 케어 이완 릴렉스 가이드.">
   <meta property="og:type" content="website">
@@ -223,89 +223,89 @@
 <body>
 
 <header>
-    <h1>GLASS_BH_MASSAGE_CONSOLE</h1>
-    <p>Frosted Glass Overlay & Premium Care Metrics</p>
+ <h1>GLASS_BH_MASSAGE_CONSOLE</h1>
+ <p>Frosted Glass Overlay & Premium Care Metrics</p>
 </header>
 
 <div class="container">
-    <div class="nav-links">
-        <a href="index.html">메인 콘솔</a>
-        <a href="about.html">상세 리포트</a>
-    </div>
+ <div class="nav-links">
+ <a href="index.html">메인 콘솔</a>
+ <a href="about.html">상세 리포트</a>
+ </div>
 
-    <div class="intro-box">
-        <h2>[GLASS_MSG] 방화동 주변 가성비 마사지 이벤트 콘솔에 접속되었습니다</h2>
-        <p>
-            방화역과 김포공항 사이 대형 오피스 밸리 및 주택 상권 한가운데서 고된 야근 스케줄과 컴파일 에러에 시달려 
-            대뇌 뇌세포 리소스를 전부 방전해 버린 IT 요원 브로들을 환영한다.
-            길거리 삐끼들의 저질 요금 장난질과 임의 빌링 메모리 오염 지뢰밭을 완벽하게 우회(Bypass)하기 위해,
-            형이 직접 반투명 서리 유리 비주얼 아우라 속에서 엄격한 사비를 격파해 추출한 <strong>방화 마사지 이벤트</strong> 정찰 리포트를 로드한다.
-            그 어떤 악의적인 피싱 코드가 끼어들지 못하도록, 철저하게 검증 완료한 안심 이벤트 요율을 박제했으니 내상 없이 진입해라 브로.
-        </p>
-        
-        <table class="spec-table">
-            <thead>
-                <tr>
-                    <th>마사지 등급 클래스 (GLASS_CLASS)</th>
-                    <th>표준 단가 요율 (FLAT_RATE)</th>
-                    <th>제공되는 오일 & 서비스 스택 (BUFF_STACK)</th>
-                    <th>방화역 최고의 안심 꿀팁 (bro_advice)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>GLASS VIP OVERLAY</td>
-                    <td>전용 핫라인 단일 가격 락(Lock)</td>
-                    <td>프리미엄 보드카/데킬라 1병 + 수제 모둠 플래터 무제한 + 에너지 드링크 버퍼</td>
-                    <td>외부 차음 댐퍼 스펙으로 최고의 프라이빗 안심 공간 보장</td>
-                </tr>
-                <tr>
-                    <td>FROSTED GOLD LAYER</td>
-                    <td>사전 예약 해피아워 타임세일</td>
-                    <td>소맥 플레이터 타워 + 기본 안주 무한 리필</td>
-                    <td>비즈니스 접대 및 고급스러운 회식 모임에 강력 추천</td>
-                </tr>
-                <tr>
-                    <td>GLASS SHELL CLASS</td>
-                    <td>평일 9시 이전 체크인 혜택</td>
-                    <td>맥주 세트 + 핑거 푸드 스낵 무상 바인딩</td>
-                    <td>다이렉트 통화 연결 즉시 예약 특급 과일 세트 무상 지급 스위치 활성화</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+ <div class="intro-box">
+ <h2>[GLASS_MSG] 방화동 주변 가성비 마사지 이벤트 콘솔에 접속되었습니다</h2>
+ <p>
+ 방화역과 김포공항 사이 대형 오피스 밸리 및 주택 상권 한가운데서 고된 야근 스케줄과 컴파일 에러에 시달려 
+ 대뇌 뇌세포 리소스를 전부 방전해 버린 IT 요원 브로들을 환영한다.
+ 길거리 삐끼들의 저질 요금 장난질과 임의 빌링 메모리 오염 지뢰밭을 완벽하게 우회(Bypass)하기 위해,
+ 형이 직접 반투명 서리 유리 비주얼 아우라 속에서 엄격한 사비를 격파해 추출한 <strong>방화 마사지 이벤트</strong> 정찰 리포트를 로드한다.
+ 그 어떤 악의적인 피싱 코드가 끼어들지 못하도록, 철저하게 검증 완료한 안심 이벤트 요율을 박제했으니 내상 없이 진입해라 브로.
+ </p>
+ 
+ <table class="spec-table">
+ <thead>
+ <tr>
+ <th>마사지 등급 클래스 (GLASS_CLASS)</th>
+ <th>표준 단가 요율 (FLAT_RATE)</th>
+ <th>제공되는 오일 & 서비스 스택 (BUFF_STACK)</th>
+ <th>방화역 최고의 안심 꿀팁 (bro_advice)</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>GLASS VIP OVERLAY</td>
+ <td>전용 핫라인 단일 가격 락(Lock)</td>
+ <td>프리미엄 보드카/데킬라 1병 + 수제 모둠 플래터 무제한 + 에너지 드링크 버퍼</td>
+ <td>외부 차음 댐퍼 스펙으로 최고의 프라이빗 안심 공간 보장</td>
+ </tr>
+ <tr>
+ <td>FROSTED GOLD LAYER</td>
+ <td>사전 예약 해피아워 타임세일</td>
+ <td>소맥 플레이터 타워 + 기본 안주 무한 리필</td>
+ <td>비즈니스 접대 및 고급스러운 회식 모임에 강력 추천</td>
+ </tr>
+ <tr>
+ <td>GLASS SHELL CLASS</td>
+ <td>평일 9시 이전 체크인 혜택</td>
+ <td>맥주 세트 + 핑거 푸드 스낵 무상 바인딩</td>
+ <td>다이렉트 통화 연결 즉시 예약 특급 과일 세트 무상 지급 스위치 활성화</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
 
-    <div class="story-section">
-        <h2>📟 데니스 리치 UNIX Epoch 기원과 방화 가라오케 마이크 에코 딜레이(Y2K38 Bug) 극비 비화 썰</h2>
-        <p>
-            자, 여기서 이 컴퓨터 터미널 미니멀 시안 무드에 100% 매칭되는, 역사상 가장 지적이고 소름 돋는 C언어 거장 <strong>데니스 리치(Dennis Ritchie)</strong>의 극비 썰을 하나 풀어볼게. 
-            현대 모든 소프트웨어의 근간이 되는 C언어와 UNIX 운영체제를 탄생시킨 위대한 개척자 데니스 리치는, 
-            1970년대 AT&T 벨 연구소의 차갑고 격리된 시스템 연구실 안에서 UNIX 시스템의 표준 시간인 <strong>Epoch Time</strong>(1970년 1월 1일 0시 0분 0초를 기준으로 흘러간 누적 초 수)을 정의하고 있었어. 
-            당시 32비트 컴퓨터 시스템상에서 정수형 데이터가 가질 수 있는 한계 때문에, 
-            시간 누적 초가 오버플로우를 일으켜 2038년 1월 19일 03시 14분 07초에 시간이 거꾸로 흘러 온 세상 컴퓨터가 셧다운된다는 악명 높은 <strong>2038년 시간 버그(Y2K38)</strong>의 단초가 이때 마련되었지.
-        </p>
-        <p>
-            그런데 말이야, 벨 연구소 내부 기밀 기술 노트 중 흥미로운 문장이 하나 발견됐어. 
-            "인간의 대뇌 뇌파를 외부 주파수 자극에 동화시켜 안전하게 휴식 상태로 가이드하고, 
-            벽면에 반사되는 음향 지연 시간(Echo Delay)을 밀리초 아래 단위까지 정밀하게 타임스탬프화할 때, 
-            가장 이상적인 초 단위의 최소 분해능은 가로 세로 4미터 크기의 콘크리트 방음 룸 안에서 앰프 마이크 에코 딜레이 주파수를 약 0.35초로 튜닝하여 루프를 돌릴 때의 파동 물리학적 공진 주기에서 인덱싱되었다."
-        </p>
-        <p>
-            브로! 이게 대체 무엇을 의미하겠어? 
-            위대한 데니스 리치가 UNIX 시스템의 표준 타이머 시간 틱 단위를 정의할 때 참고했던 물리적 파동 샘플링 주기가, 
-            다름 아닌 우리가 방화동 으슥한 지하 가라오케 밀폐실 안에서 마이크를 쥐고 앰프 에코 볼륨을 조절하며 노래 부를 때의 물리적 에코 반사 주기였다는 생체 물리학 팩트라는 소리지 브로! 
-            오늘 밤 너도 이 미쳐버린 컴퓨터 거장들의 공식과 전두엽의 극적인 이완 릴렉스를 
-            현금 눈탱이 걱정 전혀 없는 고가성비 정찰 요금으로 느끼고 싶다면, 
-            당장 형의 VIP 안심 핫라인 콘솔로 예약을 진행해서 방화동 최고의 으뜸 룸으로 전격 다이브해라 브로!
-        </p>
-    </div>
+ <div class="story-section">
+ <h2>📟 데니스 리치 UNIX Epoch 기원과 방화 가라오케 마이크 에코 딜레이(Y2K38 Bug) 극비 비화 썰</h2>
+ <p>
+ 자, 여기서 이 컴퓨터 터미널 미니멀 시안 무드에 100% 매칭되는, 역사상 가장 지적이고 소름 돋는 C언어 거장 <strong>데니스 리치(Dennis Ritchie)</strong>의 극비 썰을 하나 풀어볼게. 
+ 현대 모든 소프트웨어의 근간이 되는 C언어와 UNIX 운영체제를 탄생시킨 위대한 개척자 데니스 리치는, 
+ 1970년대 AT&T 벨 연구소의 차갑고 격리된 시스템 연구실 안에서 UNIX 시스템의 표준 시간인 <strong>Epoch Time</strong>(1970년 1월 1일 0시 0분 0초를 기준으로 흘러간 누적 초 수)을 정의하고 있었어. 
+ 당시 32비트 컴퓨터 시스템상에서 정수형 데이터가 가질 수 있는 한계 때문에, 
+ 시간 누적 초가 오버플로우를 일으켜 2038년 1월 19일 03시 14분 07초에 시간이 거꾸로 흘러 온 세상 컴퓨터가 셧다운된다는 악명 높은 <strong>2038년 시간 버그(Y2K38)</strong>의 단초가 이때 마련되었지.
+ </p>
+ <p>
+ 그런데 말이야, 벨 연구소 내부 기밀 기술 노트 중 흥미로운 문장이 하나 발견됐어. 
+ "인간의 대뇌 뇌파를 외부 주파수 자극에 동화시켜 안전하게 휴식 상태로 가이드하고, 
+ 벽면에 반사되는 음향 지연 시간(Echo Delay)을 밀리초 아래 단위까지 정밀하게 타임스탬프화할 때, 
+ 가장 이상적인 초 단위의 최소 분해능은 가로 세로 4미터 크기의 콘크리트 방음 룸 안에서 앰프 마이크 에코 딜레이 주파수를 약 0.35초로 튜닝하여 루프를 돌릴 때의 파동 물리학적 공진 주기에서 인덱싱되었다."
+ </p>
+ <p>
+ 브로! 이게 대체 무엇을 의미하겠어? 
+ 위대한 데니스 리치가 UNIX 시스템의 표준 타이머 시간 틱 단위를 정의할 때 참고했던 물리적 파동 샘플링 주기가, 
+ 다름 아닌 우리가 방화동 으슥한 지하 가라오케 밀폐실 안에서 마이크를 쥐고 앰프 에코 볼륨을 조절하며 노래 부를 때의 물리적 에코 반사 주기였다는 생체 물리학 팩트라는 소리지 브로! 
+ 오늘 밤 너도 이 미쳐버린 컴퓨터 거장들의 공식과 전두엽의 극적인 이완 릴렉스를 
+ 현금 눈탱이 걱정 전혀 없는 고가성비 정찰 요금으로 느끼고 싶다면, 
+ 당장 형의 VIP 안심 핫라인 콘솔로 예약을 진행해서 방화동 최고의 으뜸 룸으로 전격 다이브해라 브로!
+ </p>
+ </div>
 
-    <div class="cta-section">
-        <h2>[EXEC] RESERVATION_RUN: 방화 VIP 실시간 다이얼 예약</h2>
-        <p>어이 브로, 요금 덤터기 마찰로 뇌 과열시키지 말고 정직하게 정찰제 예약하자.</p>
-        <p>아래 다이얼 버튼 터치 시 즉시 VIP 할인가 적용 및 무상 과일 안주 추가 제공!</p>
-        <a href="tel:010-6279-0862" class="btn-call">📞 즉시 통화 연결: 010-6279-0862</a>
-    </div>
+ <div class="cta-section">
+ <h2>[EXEC] RESERVATION_RUN: 방화 VIP 실시간 다이얼 예약</h2>
+ <p>어이 브로, 요금 덤터기 마찰로 뇌 과열시키지 말고 정직하게 정찰제 예약하자.</p>
+ <p>아래 다이얼 버튼 터치 시 즉시 VIP 할인가 적용 및 무상 과일 안주 추가 제공!</p>
+ 
+ </div>
 </div>
 
 
@@ -313,11 +313,11 @@
 
 <!-- PBN Recent Posts Feed Section -->
 <section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
-  <div style="max-width:1100px;margin:0 auto">
-    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
-      
-    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+ <div style="max-width:1100px;margin:0 auto">
+ <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+ <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+ 
+ <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
 <h2>방화 마사지 이벤트 안내</h2>
 <p>방화 지역에서 열리는 마사지 이벤트는 현대적인 디자인 감각과 전통적인 치유 기법을 결합한 특별한 프로그램으로 준비되었습니다. 참가자들은 편안한 공간에서 몸과 마음의 긴장을 풀며 새로운 활력을 얻을 수 있습니다.</p>
 <p>이번 행사의 핵심 컨셉인 글래스모피즘 분위기는 투명하고 빛이 스며드는 시각적 요소를 마사지 공간에 적용해 심신의 안정을 돕습니다. 부드러운 조명과 반투명한 소재가 어우러져 마치 디지털 창문 너머의 평온함을 느끼게 합니다.</p>
@@ -326,78 +326,78 @@
 <p>마사지 전후로는 충분한 수분 섭취와 가벼운 스트레칭을 권장합니다. 특히 목과 어깨 부위에 집중된 긴장이 많은 분들은 전문가의 맞춤형 조언을 통해 보다 효과적인 이완을 경험할 수 있습니다.</p>
 <p>이벤트 기간 동안 제공되는 모든 서비스는 별도의 비용 없이 무료로 이용 가능하며, 개인 위생용품은 개별 지참하시길 바랍니다. 안전하고 쾌적한 환경 유지를 위해 마스크 착용과 손소독제 사용에 협조해 주시기 바랍니다.</p>
 </article>
-    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
-          <span>⭐ REVIEW</span>
-          <time datetime="2026-05-24">2026-05-24</time>
-        </div>
-        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">아날로그 문화 컬렉터들이 선정한 마포 셔츠룸 트렌드 정보 공유 리포트</h4>
-        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
-      </div>
-      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
-    </article>
-    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
-          <span>⭐ REVIEW</span>
-          <time datetime="2026-05-24">2026-05-24</time>
-        </div>
-        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">아날로그 문화 컬렉터들이 선정한 마포 셔츠룸 트렌드 정보 공유 리포트</h4>
-        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
-      </div>
-      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
-    </article>
-    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
-          <span>⭐ REVIEW</span>
-          <time datetime="2026-05-24">2026-05-24</time>
-        </div>
-        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">1960년대 한국 영화 손글씨 포스터 서체(Typography)의 시각 디자인적 보존 가치</h4>
-        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
-      </div>
-      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
-    </article>
-    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
-          <span>⭐ REVIEW</span>
-          <time datetime="2026-05-24">2026-05-24</time>
-        </div>
-        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">전통 악기 장인들의 보존 노하우: 해금 실크 현(Silk String)의 천연 비왁스 코팅 기법</h4>
-        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
-      </div>
-      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
-    </article>
-    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
-          <span>⭐ REVIEW</span>
-          <time datetime="2026-05-24">2026-05-24</time>
-        </div>
-        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">활판 인쇄술의 숨겨진 보석: 19세기 납 활자(Lead Type) 캐스팅 자형 조각 기술</h4>
-        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
-      </div>
-      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
-    </article>
-    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
-          <span>⭐ REVIEW</span>
-          <time datetime="2026-06-05">2026-06-05</time>
-        </div>
-        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">03년 &#39;파리 덩크&#39;, 21년 &#39;레트로&#39;, 내 속으로 파고든 디테일의 차이점</h4>
-        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">nike sb dunk low paris 2003, nike sb dunk low paris 2021 retro, sneaker details, stitching density, paper quality, collectible sneakers, rare footwear</p>
-      </div>
-      <a href="posts/review-001.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
-    </article>
-    </div>
-  </div>
+ <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+ <div>
+ <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+ <span>⭐ REVIEW</span>
+ <time datetime="2026-05-24">2026-05-24</time>
+ </div>
+ <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">아날로그 문화 컬렉터들이 선정한 마포 셔츠룸 트렌드 정보 공유 리포트</h4>
+ 
+ </div>
+ <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+ </article>
+ <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+ <div>
+ <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+ <span>⭐ REVIEW</span>
+ <time datetime="2026-05-24">2026-05-24</time>
+ </div>
+ <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">아날로그 문화 컬렉터들이 선정한 마포 셔츠룸 트렌드 정보 공유 리포트</h4>
+ 
+ </div>
+ <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+ </article>
+ <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+ <div>
+ <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+ <span>⭐ REVIEW</span>
+ <time datetime="2026-05-24">2026-05-24</time>
+ </div>
+ <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">1960년대 한국 영화 손글씨 포스터 서체(Typography)의 시각 디자인적 보존 가치</h4>
+ 
+ </div>
+ <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+ </article>
+ <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+ <div>
+ <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+ <span>⭐ REVIEW</span>
+ <time datetime="2026-05-24">2026-05-24</time>
+ </div>
+ <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">전통 악기 장인들의 보존 노하우: 해금 실크 현(Silk String)의 천연 비왁스 코팅 기법</h4>
+ 
+ </div>
+ <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+ </article>
+ <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+ <div>
+ <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+ <span>⭐ REVIEW</span>
+ <time datetime="2026-05-24">2026-05-24</time>
+ </div>
+ <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">활판 인쇄술의 숨겨진 보석: 19세기 납 활자(Lead Type) 캐스팅 자형 조각 기술</h4>
+ 
+ </div>
+ <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+ </article>
+ <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+ <div>
+ <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+ <span>⭐ REVIEW</span>
+ <time datetime="2026-06-05">2026-06-05</time>
+ </div>
+ <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">03년 &#39;파리 덩크&#39;, 21년 &#39;레트로&#39;, 내 속으로 파고든 디테일의 차이점</h4>
+ <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">nike sb dunk low paris 2003, nike sb dunk low paris 2021 retro, sneaker details, stitching density, paper quality, collectible sneakers, rare footwear</p>
+ </div>
+ <a href="posts/review-001.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+ </article>
+ </div>
+ </div>
 </section>
 <footer>
-    <p>&copy; 2026 GLASS_BH_MASSAGE & UNIX Epoch Research. All Rights Reserved.</p>
-    <p>Console_Port: 010-6279-0862 | Secured by Glassmorphism Overlay</p>
+ <p>&copy; 2026 GLASS_BH_MASSAGE & UNIX Epoch Research. All Rights Reserved.</p>
+ <p>Secured by Glassmorphism Overlay</p>
 </footer>
 
 </body>
