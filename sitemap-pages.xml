@@ -16,6 +16,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://daeheung-karaoke-note.notewell.site/posts.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://daeheung-karaoke-note.notewell.site/posts/checklist-001-d0q1t6.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -62,11 +67,6 @@
   </url>
   <url>
     <loc>https://daeheung-karaoke-note.notewell.site/posts/review-001.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://daeheung-karaoke-note.notewell.site/posts.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
